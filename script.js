@@ -15376,6 +15376,15 @@ function submitGuess() {
     return;
   }
   
+  const guess = activeTiles.reduce((word, tile) => {
+    return word + tile.dataset.letter;
+  }, "")
+  console.log(guess);
+
+  if (!dictionary.includes(guess)) {
+    showAlert("Not in word list");
+    shakeTiles(activeTiles);
+  }
 }
 
 function getActiveTiles() {
@@ -15396,4 +15405,13 @@ function showAlert(message, duration = 1000) {
       alert.remove();
     })
   }, duration);
+}
+
+function shakeTiles(tiles) {
+  tiles.forEach(tile => {
+    tile.classList.add("shake");
+    tile.addEventListener("animationend", () => {
+      tile.classList.remove("shake");
+    }, {once: true})
+  })
 }
