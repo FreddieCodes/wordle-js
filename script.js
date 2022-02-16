@@ -15297,10 +15297,11 @@ const alertContainer = document.querySelector("[data-alert-container]");
 const guessGrid = document.querySelector("[data-guess-grid]");
 const keyboard = document.querySelector("[data-keyboard]");
 
-const offSetFromDate = new Date(2022, 0, 1);
+const offSetFromDate = new Date(2021, 5, 18);
 const msOffset = Date.now() - offSetFromDate;
 const dayOffset = msOffset / 1000 / 60 / 60/ 24; // converts the ms value into a day value (secs, minutes, hr, day)
 const targetWord = targetWords[Math.floor(dayOffset)];
+console.log(targetWord);
 
 startInteraction();
 
