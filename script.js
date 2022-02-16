@@ -15346,13 +15346,13 @@ function handleKeyPress(e) {
   if(e.key.match(/[a-z]$/) ) {
     pressKey(e.key);
   }
-
 }
 
 function pressKey(key) {
   const activeTiles = getActiveTiles();
 
   if (activeTiles.length >= WORD_LENGTH) return;
+  if (key.length !== 1) return;
 
   const nextTile = guessGrid.querySelector(":not([data-letter])");
   nextTile.dataset.letter = key.toLowerCase();
