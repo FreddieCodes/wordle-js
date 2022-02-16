@@ -1,4 +1,3 @@
-# wordle-js
+# wordle-clone
 
-From
-https://www.youtube.com/watch?v=Wak7iN4JZzU
+for fun
