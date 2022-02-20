@@ -129,6 +129,15 @@ header {
 	background-color: hsl(115, 29%, 43%);
 }
 
+.tile[data-state="multiple"] {
+	border: none;
+	background-color: hsl(191, 87%, 48%);
+}
+
+.tile.multiple {
+	border: solid 2px hsl(191, 87%, 48%);
+}
+
 .tile.shake {
 	animation: shake 250ms ease-in-out;
 }

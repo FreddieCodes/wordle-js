@@ -15413,6 +15413,10 @@ function flipTile(tile, index, array, guess) {
       tile.dataset.state = "wrong";
       key.classList.add("wrong");
     }
+
+    if (isMultiple(letter, targetWord)) {
+      tile.classList.add("multiple")
+    }
     // Starts interaction after transition ends
     if (index === array.length -1) {
       tile.addEventListener("transitionend", () => {
@@ -15476,4 +15480,9 @@ function danceTiles(tiles) {
       }, {once: true})
     }, index * DANCE_ANIMATION_DURATION / 5) 
   })
+}
+
+function isMultiple(letter, answer) {
+  let count = answer.split('').filter(x => x == letter).length;
+  return count > 1;
 }
