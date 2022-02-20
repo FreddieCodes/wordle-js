@@ -28,10 +28,17 @@ header {
 	font-size: 7vh;
 }
 
+.game-container {
+	display: flex;
+	flex-direction: column;
+	min-height: 87vh;
+	justify-content: center;
+}
+
 .keyboard {
 	display: grid;
-	grid-template-columns: repeat(20, minmax(auto, 1.25em));
-	grid-auto-rows: 3em;
+	grid-template-columns: repeat(20, minmax(auto, 4vh));
+	grid-auto-rows: 4vh;
 	gap: .25em;
 	justify-content: center;
 }
@@ -85,8 +92,8 @@ header {
 	justify-content: center;
 	align-content: center;
 	flex-grow: 1;
-	grid-template-columns: repeat(5, 4em);
-	grid-template-rows: repeat(6, 4em);
+	grid-template-columns: repeat(5, 7vh);
+	grid-template-rows: repeat(6, 7vh);
 	gap: .25em;
 	margin-bottom: 1em;
 }
