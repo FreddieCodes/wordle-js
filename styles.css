@@ -31,12 +31,11 @@ header {
 	display: flex;
 	flex-direction: column;
 	min-height: 87vh;
-	justify-content: flex-end;
+	justify-content: space-evenly;
 }
 
 .keyboard {
 	display: grid;
-	margin-top: 15vh;
 	grid-template-columns: repeat(20, minmax(auto, 3vh));
 	grid-auto-rows: 5vh;
 	gap: .25em;
